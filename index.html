@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ghana's Legit and Trusted Digital Store</title>
+
+	<!-- font awesome cdn link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+	<!-- Google Fonts for modern typography -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     
+     <!-- custom css file link  -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    
+</head>
+<body>
+<!-- header section starts -->
+<header class="header">
+	<a href="#" class="logo">
+		<img src="images/logo.png" alt="GH GameKeys Logo">
+	</a>
+	<nav class="navbar">
+		<a href="#home">home</a>
+		<a href="#about">about</a>
+		<a href="#game">game collection</a>
+		<a href="#products">products</a>
+		<a href="#review">review</a>
+		<a href="#contact">contact</a>
+	</nav>
+	<div class="icons">
+		<div class="fas fa-shopping-cart" id="cart-btn" data-count="0"></div>
+		<div class="fas fa-moon" id="theme-toggle"></div>
+		<div class="fas fa-bars" id="menu-btn"></div>
+	</div>
+	<div class="cart-items-container">
+		<div id="cart-items"></div>
+		<a href="cart.html" class="btn">view cart</a>
+	</div>
+</header>
+<!-- header section ends -->
+
+<!-- toast notification -->
+<div id="toast" class="toast"></div>
+
+<!-- home section starts -->
+<section class="home" id="home">
+	<div class="content">
+		<h3>Get up to 90% off best selling video games</h3>
+		<a href="#game" class="btn">get now</a>
+	</div>
+</section>
+<!-- home section ends -->
+
+<!-- about section starts -->
+<section class="about" id="about">
+	<h1 class="heading"><span>about</span> us</h1>
+	<div class="row">
+		<div class="image">
+			<img src="images/about-img.png" alt="About Image">
+		</div>
+		<div class="content">
+			<h3>what makes our digital store special?</h3>
+			<p>100% Legitimate Keys from Official Sources</p>
+			<p>Instant Delivery & Zero Hassle</p>
+			<p>Secure Payment & Buyer Protection</p>
+			<a href="learnmore.html" class="btn">learn more</a>
+		</div>
+	</div>
+</section>
+<!-- about section ends -->
+
+<!-- game section starts -->
+<section class="game" id="game">
+	<h1 class="heading"><span>Game</span> Collection</h1>
+	<div class="box-container">
+		<div class="box" data-item='{"name":"Call of Duty BO6 (Steam)","price":"GH₵300","image":"images/blackops.png"}'>
+			<img src="images/blackops.png" alt="Call of Duty BO6">
+			<h3>Call of Duty BO6 (Steam)</h3>
+			<div class="price">GH₵300 <span>GH₵600</span></div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+		<div class="box" data-item='{"name":"Tekken 8 (PlayStation 5)","price":"GH₵460","image":"images/new_project_-_2023-08-28t100027.863.jpg"}'>
+			<img src="images/new_project_-_2023-08-28t100027.863.jpg" alt="Tekken 8">
+			<h3>Tekken 8 (PlayStation 5)</h3>
+			<div class="price">GH₵460 <span>GH₵660</span></div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+		<div class="box" data-item='{"name":"EAFC 25 (Steam)","price":"GH₵250","image":"images/eafc.jpg"}'>
+			<img src="images/eafc.jpg" alt="EAFC 25">
+			<h3>EAFC 25 (Steam)</h3>
+			<div class="price">GH₵250 <span>GH₵600</span></div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+		<div class="box" data-item='{"name":"God of War Ragnarok (PlayStation 5)","price":"GH₵390","image":"images/egs_godofwar.jpg"}'>
+			<img src="images/egs_godofwar.jpg" alt="God of War Ragnarok">
+			<h3>God of War Ragnarok (PlayStation 5)</h3>
+			<div class="price">GH₵390 <span>GH₵700</span></div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+		<div class="box" data-item='{"name":"Stellar Blade (PlayStation 5)","price":"GH₵650","image":"images/stellar_blade_cdkeys.png"}'>
+			<img src="images/stellar_blade_cdkeys.png" alt="Stellar Blade">
+			<h3>Stellar Blade (PlayStation 5)</h3>
+			<div class="price">GH₵650 <span>GH₵790</span></div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+		<div class="box" data-item='{"name":"Black Myth Wukong (Steam)","price":"GH₵490","image":"images/black-myth-wukong-steam.jpg"}'>
+			<img src="images/black-myth-wukong-steam.jpg" alt="Black Myth Wukong">
+			<h3>Black Myth Wukong (Steam)</h3>
+			<div class="price">GH₵490 <span>GH₵690</span></div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+		<div class="box" data-item='{"name":"Among Us (Xbox One)","price":"GH₵19","image":"images/game-steam-among-us-cover_1__1.jpg"}'>
+			<img src="images/game-steam-among-us-cover_1__1.jpg" alt="Among Us">
+			<h3>Among Us (Xbox One)</h3>
+			<div class="price">GH₵19 <span>GH₵40</span></div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+		<div class="box" data-item='{"name":"Clair Obscur Expedition 33 (Xbox One)","price":"GH₵400","image":"images/clair_obscur-_expedition_33_.png"}'>
+			<img src="images/clair_obscur-_expedition_33_.png" alt="Clair Obscur Expedition 33">
+			<h3>Clair Obscur Expedition 33 (Xbox One)</h3>
+			<div class="price">GH₵400</div>
+			<a href="#" class="btn add-to-cart">add to cart</a>
+		</div>
+	</div>
+</section>
+<div class="view">
+	<a href="ViewMore.html" class="btn">View More</a>
+</div>
+<!-- game collection section ends -->
+
+<!-- products section starts -->
+<section class="products" id="products">
+	<h1 class="heading"> <span> Products </span></h1>
+	<div class="box-container">
+		<div class="box" data-item='{"name":"PlayStation 5 Pro","price":"GH₵6500","image":"images/product-1.png"}'>
+			<div class="icons">
+				<a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+				<a href="#" class="fas fa-heart"></a>
+				<a href="#" class="fas fa-eye"></a>
+			</div>
+			<div class="image">
+				<img src="images/product-1.png" alt="PlayStation 5 Pro">
+			</div>
+			<div class="content">
+				<h3>PlayStation 5 Pro</h3>
+				<div class="stars">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star-half-alt"></i>
+				</div>
+				<div class="price">GH₵6,500 <span>GH₵8,500</span></div>
+			</div>
+		</div>
+		<div class="box" data-item='{"name":"Xbox Series X","price":"GH₵6000","image":"images/Xbox one.png"}'>
+			<div class="icons">
+				<a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+				<a href="#" class="fas fa-heart"></a>
+				<a href="#" class="fas fa-eye"></a>
+			</div>
+			<div class="image">
+				<img src="images/Xbox one.png" alt="Xbox Series X">
+			</div>
+			<div class="content">
+				<h3>Xbox Series X</h3>
+				<div class="stars">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star-half-alt"></i>
+				</div>
+				<div class="price">GH₵6,000 <span>GH₵7,500</span></div>
+			</div>
+		</div>
+		<div class="box" data-item='{"name":"Nintendo Switch 2","price":"GH₵6900","image":"images/switch 2.png"}'>
+			<div class="icons">
+				<a href="#" class="fas fa-shopping-cart add-to-cart"></a>
+				<a href="#" class="fas fa-heart"></a>
+				<a href="#" class="fas fa-eye"></a>
+			</div>
+			<div class="image">
+				<img src="images/switch 2.png" alt="Nintendo Switch 2">
+			</div>
+			<div class="content">
+				<h3>Nintendo Switch 2</h3>
+				<div class="stars">
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star-half-alt"></i>
+				</div>
+				<div class="price">GH₵6,900 <span>GH₵8,590</span></div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- products section ends -->
+
+<!-- review section starts -->
+<section class="review" id="review">
+	<h1 class="heading">customer's <span> review</span></h1>
+	<div class="box-container">
+		<div class="box">
+			<img src="images/quote-img.png" alt="Quote" class="quote">
+			<p>"I was skeptical at first, but GH GameKeys delivered my FIFA 23 key within seconds after payment! The key activated on Origin without issues, and the price was cheaper than other stores. Their Paystack payment was smooth, and I loved the instant email receipt. Will definitely buy again!"</p>
+			<img src="images/pic1.png" class="user" alt="Ben Frank">
+			<h3>Ben Frank</h3>
+			<div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star-half-alt"></i>
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/quote-img.png" alt="Quote" class="quote">
+			<p>"My first key had an activation error, but GH GameKeys’ support team resolved it in under 1 hour—they sent a replacement immediately! I appreciated their quick WhatsApp response and honesty. Most sellers would ghost you, but they kept their refund promise. Trustworthy platform!"</p>
+			<img src="images/pic2.png" class="user" alt="Kojo Antwi">
+			<h3>Kojo Antwi</h3>
+			<div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star-half-alt"></i>
+			</div>
+		</div>
+		<div class="box">
+			<img src="images/quote-img.png" alt="Quote" class="quote">
+			<p>"As a student, I can’t afford full-price games. GH GameKeys gave me a legit GTA V key at 40% off retail price! The Mobile Money payment was convenient, and the key worked perfectly. No VPN tricks or region locks. My go-to store for games now!"</p>
+			<img src="images/pic3.png" class="user" alt="Bob Marley">
+			<h3>Bob Marley</h3>
+			<div class="stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star-half-alt"></i>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- review section ends -->
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+	<h1 class="heading">contact <span> us</span></h1>
+	<div class="row">
+		<form id="contactForm">
+			<h3>get in touch</h3>
+			<div class="inputBox">
+    <span class="fas fa-user"></span>
+    <input type="text" name="name" placeholder="Name" required>
+  </div>
+  <div class="inputBox">
+    <span class="fas fa-envelope"></span>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+  
+  <!-- Message Box -->
+  <div class="inputBox message-box">
+    <span class="fas fa-comment"></span>
+    <textarea name="message" placeholder="Your message..." required rows="4"></textarea>
+  </div>
+  
+  <input type="submit" value="Send Message" class="btn">
+</form>
+
+<!-- Status Modal -->
+<div id="formStatus" class="status-modal">
+  <div class="status-content">
+    <span class="status-icon">!</span>
+    <p class="status-text"></p>
+    <a href="#" class="status-link btn" target="_blank">View Form</a>
+    <button class="status-close btn">Close</button>
+  </div>
+</div>
+		</form>
+	</div>
+</section>
+<!-- contact section ends -->
+
+<!-- footer section starts -->
+<section class="footer">
+	<div class="share">
+		<a href="https://web.facebook.com/?_rdc=1&_rdr#" class="fab fa-facebook-f"></a>
+		<a href="https://x.com/" class="fab fa-twitter"></a>
+		<a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+		<a href="https://www.pinterest.com/" class="fab fa-pinterest"></a>
+	</div>
+	<div class="links">
+		<a href="#home">home</a>
+		<a href="#about">about</a>
+		<a href="#game">Game Collection</a>
+		<a href="#products">products</a>
+		<a href="#review">review</a>
+	</div>
+	<div class="credit">
+		created by
+		<span class="developer-info"> <a href="" target="">Alexander Osei</a></span> | all rights reserved
+	</div>
+</section>
+<!-- footer section ends -->
+
+<!-- custom js file link -->
+<script src="cart.js"></script>
+<script>
+	let navbar = document.querySelector('.navbar');
+    let cartItem = document.querySelector('.cart-items-container');
+    let cartBtn = document.querySelector('#cart-btn');
+    let themeToggle = document.querySelector('#theme-toggle');
+
+    // Theme toggle functionality
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        themeToggle.classList.toggle('fa-moon', newTheme === 'dark');
+        themeToggle.classList.toggle('fa-sun', newTheme === 'light');
+        localStorage.setItem('theme', newTheme);
+    }
+
+    // Load saved theme
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        themeToggle.classList.toggle('fa-moon', savedTheme === 'dark');
+        themeToggle.classList.toggle('fa-sun', savedTheme === 'light');
+    });
+
+    themeToggle.onclick = toggleTheme;
+
+    // Navbar toggle for mobile
+    document.querySelector('#menu-btn').onclick = (e) => {
+        e.stopPropagation();
+        navbar.classList.toggle('active');
+        cartItem.classList.remove('active');
+    }
+
+    // Close navbar and cart when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!navbar.contains(e.target) && !document.querySelector('#menu-btn').contains(e.target)) {
+            navbar.classList.remove('active');
+        }
+        if (!cartItem.contains(e.target) && !cartBtn.contains(e.target)) {
+            cartItem.classList.remove('active');
+        }
+    });
+
+    // Cart button redirect to cart.html
+    cartBtn.onclick = () => {
+        window.location.href = 'cart.html';
+    }
+
+    // Show cart dropdown on hover (desktop only)
+    cartBtn.onmouseenter = () => {
+        if (window.innerWidth > 768) {
+            cartItem.classList.add('active');
+            navbar.classList.remove('active');
+        }
+    };
+
+    cartItem.onmouseleave = () => {
+        if (window.innerWidth > 768) {
+            cartItem.classList.remove('active');
+        }
+    };
+
+    // Close navbar and cart on scroll
+    window.onscroll = () => {
+        navbar.classList.remove('active');
+        cartItem.classList.remove('active');
+    }
+
+    // Show toast notification
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+
+    // Update cart item count badge
+    function updateCartBadge() {
+        const cart = getCart();
+        const itemCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+        cartBtn.setAttribute('data-count', itemCount);
+        cartBtn.classList.toggle('has-items', itemCount > 0);
+    }
+
+    // Add to cart functionality
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const box = button.closest('.box');
+            const item = JSON.parse(box.dataset.item);
+            addToCart(item);
+            loadCartItems();
+            updateCartBadge();
+            showToast(`${item.name} added to cart!`);
+        });
+    });
+
+    // Load cart items and update badge on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        loadCartItems();
+        updateCartBadge();
+    });
+	document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const submitBtn = form.querySelector('[type="submit"]');
+  const originalText = submitBtn.value;
+  
+  // Show loading state
+  submitBtn.value = "Sending...";
+  submitBtn.disabled = true;
+  
+  try {
+    // Replace with your Formspree form ID
+    const formspreeUrl = 'https://formspree.io/f/xvgqdvwk';
+    
+    const response = await fetch(formspreeUrl, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    
+    const result = await response.json();
+    
+    if (response.ok) {
+      showStatus(
+        "✅ Message submitted successfully!", 
+        true,
+        formspreeUrl // Link to form
+      );
+      form.reset();
+    } else {
+      throw new Error(result.error || 'Submission failed');
+    }
+  } catch (error) {
+    showStatus(
+      `❌ Error: ${error.message}`,
+      false
+    );
+  } finally {
+    submitBtn.value = originalText;
+    submitBtn.disabled = false;
+  }
+});
+
+function showStatus(message, isSuccess, formUrl = null) {
+  const modal = document.getElementById('formStatus');
+  const textEl = modal.querySelector('.status-text');
+  const iconEl = modal.querySelector('.status-icon');
+  const linkEl = modal.querySelector('.status-link');
+  
+  // Set content
+  textEl.textContent = message;
+  iconEl.textContent = isSuccess ? '✓' : '✗';
+  iconEl.style.color = isSuccess ? '#4CAF50' : '#F44336';
+  
+  // Show/hide form link
+  if (formUrl && isSuccess) {
+    linkEl.href = formUrl;
+    linkEl.style.display = 'inline-block';
+  } else {
+    linkEl.style.display = 'none';
+  }
+  
+  // Show modal
+  modal.style.display = 'flex';
+  
+  // Close handlers
+  modal.querySelector('.status-close').onclick = () => {
+    modal.style.display = 'none';
+  };
+  
+  };
+
+</script>
+</body>
+</html>

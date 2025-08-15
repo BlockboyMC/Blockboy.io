@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - GH GameKeys</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/cartstyle.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="GH GameKeys Logo">
+        </a>
+        <nav class="navbar">
+            <a href="index.html#home">home</a>
+            <a href="index.html#about">about</a>
+            <a href="index.html#game">game collection</a>
+            <a href="index.html#products">products</a>
+            <a href="index.html#review">review</a>
+            <a href="index.html#contact">contact</a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-shopping-cart" id="cart-btn" data-count="0"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section" id="cart">
+        <h1 class="heading">your <span>cart</span></h1>
+        <div class="cart-container">
+            <div id="cart-items"></div>
+            <div class="checkout-summary">
+                <div class="subtotal">Subtotal: <span id="subtotal">GH₵0.00</span></div>
+                <form id="paymentForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn" id="checkout-btn">Proceed to Payment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section starts -->
+<section class="footer">
+    <div class="share">
+        <a href="https://web.facebook.com/?_rdc=1&_rdr#" class="fab fa-facebook-f"></a>
+        <a href="https://x.com/" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+        <a href="https://www.pinterest.com/" class="fab fa-pinterest"></a>
+    </div>
+    <div class="links">
+        <a href="index.html#home">home</a>
+        <a href="index.html#about">about</a>
+        <a href="index.html#game">Game Collection</a>
+        <a href="index.html#products">products</a>
+        <a href="index.html#review">review</a>
+    </div>
+    <div class="credit">
+        created by
+        <span class="developer-info"> <a href="" target="">Alexander Osei</a></span> | all rights reserved
+    </div>
+</section>
+<!-- footer section ends -->
+
+    <!-- JavaScript -->
+    <script src="cart.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCartItems();
+            updateSubtotal();
+            
+            // Payment form handler
+            document.getElementById('paymentForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const cart = getCart();
+                if (cart.length === 0) {
+                    alert('Your cart is empty!');
+                    return;
+                }
+                
+                const email = document.getElementById('email').value;
+                if (!email || !email.includes('@')) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                const total = cart.reduce((sum, item) => {
+                    const price = parseFloat(item.price.replace('GH₵', '').replace(',', ''));
+                    return sum + (price * (item.quantity || 1));
+                }, 0);
+                
+                const handler = PaystackPop.setup({
+                    key: 'pk_test_0abee01e54bd424178e344967bd1c081ba488779',
+                    email: email,
+                    amount: total * 100, // Convert to kobo
+                    currency: 'GHS',
+                    ref: 'GHGK'+Date.now(),
+                    callback: function(response) {
+                        // On successful payment
+                        localStorage.removeItem('cart');
+                        window.location.href = 'success.html?reference=' + response.reference;
+                    },
+                    onClose: function() {
+                        alert('Payment window closed - you can try again');
+                    }
+                });
+                handler.openIframe();
+            });
+        });
+        
+
+    </script>
+</body>
+</html>
